@@ -67,7 +67,8 @@ def winfolder():
         print('Report Generation directory path is: ' + directory)
         report_file = (directory + 'report_' + d_date_report_filename + '-' + d_time_report_filename + '.txt')
         thewriter = open(report_file, 'a')
-        thewriter.write('Directory is: ' + directory)
+        thewriter.write(incident_record)
+        thewriter.write('\nDirectory is: ' + directory)
         thewriter.write('\nIncident Date: ' + d_date_report_input)
         thewriter.write('\nIncident Time of record: ' + d_time_report_input)
 
@@ -75,8 +76,12 @@ def winfolder():
         print('Directory where reports are generated does not exist and will now be created.')
         os.makedirs(directory, exist_ok=True)
         print('Report Generation directory has been created on: ' + directory)
-        report_file = open('reports.txt', 'w')
-        report_file.write(directory)
+        report_file = (directory + 'report_' + d_date_report_filename + '-' + d_time_report_filename + '.txt')
+        thewriter = open(report_file, 'a')
+        thewriter.write(incident_record)
+        thewriter.write('\nDirectory is: ' + directory)
+        thewriter.write('\nIncident Date: ' + d_date_report_input)
+        thewriter.write('\nIncident Time of record: ' + d_time_report_input)
 
 
 def linuxfolder():
