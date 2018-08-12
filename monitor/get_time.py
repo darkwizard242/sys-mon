@@ -2,9 +2,9 @@
 
 import datetime
 import os
+import varslist as v
 
-
-def fetchtime():
+def fetch_time():
     """
     This function imports the current time details for both date and time.
     strftime() method from datetime module allows displaying the date & time in string format.
@@ -46,45 +46,29 @@ def fetchtime():
     return d, d_date, d_day, d_time
 
 
-def winfolder():
-    directory = str('D:\\Monitory_Reports\\')
-    # Assigning value of datetime module's datetime function to variable 'd' and other strings for filename's
-    # timestamp association.
-    d = datetime.datetime.now()
-    d_date_report_filename = d.strftime('%d%m%Y')
-    d_day_report_filename = d.strftime('%A')
-    d_time_report_filename = d.strftime('%H%M%S')
-    # Assigning value of datetime module's datetime function to variable 'd' and other strings for associating file's
-    # input.
-    d = datetime.datetime.now()
-    d_date_report_input = d.strftime('%B %d, %Y')
-    d_day_report_input = d.strftime('%A')
-    d_time_report_input = d.strftime('%I:%M:%S %p')
-    # Assigning a variable for printing incident record time.
-    incident_record = str('Incident recorded at:')
-    if os.path.exists(directory):
+def win_folder():
+    if os.path.exists(v.directory):
         print('Directory where reports are generated already exists. No new directory will be created.')
-        print('Report Generation directory path is: ' + directory)
-        report_file = (directory + 'report_' + d_date_report_filename + '-' + d_time_report_filename + '.txt')
+        print('Report Generation directory path is: ' + v.directory)
+        report_file = (v.directory + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
         thewriter = open(report_file, 'a')
-        thewriter.write(incident_record)
-        thewriter.write('\nDirectory is: ' + directory)
-        thewriter.write('\nIncident Date: ' + d_date_report_input)
-        thewriter.write('\nIncident Time of record: ' + d_time_report_input)
-
+        thewriter.write(v.incident_record)
+        thewriter.write('\nDirectory is: ' + v.directory)
+        thewriter.write('\nIncident Date: ' + v.d_date_report_input)
+        thewriter.write('\nIncident Time of record: ' + v.d_time_report_input)
     else:
         print('Directory where reports are generated does not exist and will now be created.')
-        os.makedirs(directory, exist_ok=True)
-        print('Report Generation directory has been created on: ' + directory)
-        report_file = (directory + 'report_' + d_date_report_filename + '-' + d_time_report_filename + '.txt')
+        os.makedirs(v.directory, exist_ok=True)
+        print('Report Generation directory has been created on: ' + v.directory)
+        report_file = (v.directory + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
         thewriter = open(report_file, 'a')
-        thewriter.write(incident_record)
-        thewriter.write('\nDirectory is: ' + directory)
-        thewriter.write('\nIncident Date: ' + d_date_report_input)
-        thewriter.write('\nIncident Time of record: ' + d_time_report_input)
+        thewriter.write(v.incident_record)
+        thewriter.write('\nDirectory is: ' + v.directory)
+        thewriter.write('\nIncident Date: ' + v.d_date_report_input)
+        thewriter.write('\nIncident Time of record: ' + v.d_time_report_input)
 
 
-def linuxfolder():
+def linux_folder():
     directory = str('D:\\Monitory_Reports')
     os.makedirs(directory, exist_ok=True)
 
