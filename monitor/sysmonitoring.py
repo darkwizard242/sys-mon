@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-from get_time import fetch_time, win_folder
+from filegenerator import fetch_time, win_folder
 
 win_folder()
 
