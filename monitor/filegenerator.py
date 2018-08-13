@@ -2,7 +2,7 @@
 
 import datetime
 import os
-import varslist as v
+import monitor.varslist as v
 
 def fetch_time():
     """
