@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 import datetime
+import psutil
 
 # Defining data measurements
 bit = 0 or 1
