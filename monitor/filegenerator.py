@@ -47,23 +47,23 @@ def fetch_time():
 
 
 def win_folder():
-    if os.path.exists(v.directory):
+    if os.path.exists(v.win_dir):
         print('Directory where reports are generated already exists. No new directory will be created.')
-        print('Report Generation directory path is: ' + v.directory)
-        report_file = (v.directory + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
+        print('Report Generation directory path is: ' + v.win_dir)
+        report_file = (v.win_dir + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
         thewriter = open(report_file, 'a')
         thewriter.write(v.incident_record)
-        thewriter.write('\nDirectory is: ' + v.directory)
+        thewriter.write('\nDirectory is: ' + v.win_dir)
         thewriter.write('\nIncident Date: ' + v.d_date_report_input)
         thewriter.write('\nIncident Time of record: ' + v.d_time_report_input)
     else:
         print('Directory where reports are generated does not exist and will now be created.')
-        os.makedirs(v.directory, exist_ok=True)
-        print('Report Generation directory has been created on: ' + v.directory)
-        report_file = (v.directory + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
+        os.makedirs(v.win_dir, exist_ok=True)
+        print('Report Generation directory has been created on: ' + v.win_dir)
+        report_file = (v.win_dir + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
         thewriter = open(report_file, 'a')
         thewriter.write(v.incident_record)
-        thewriter.write('\nDirectory is: ' + v.directory)
+        thewriter.write('\nDirectory is: ' + v.win_dir)
         thewriter.write('\nIncident Date: ' + v.d_date_report_input)
         thewriter.write('\nIncident Time of record: ' + v.d_time_report_input)
 
