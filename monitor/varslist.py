@@ -30,6 +30,9 @@ memory_gb_used = float(memory.used/gigabyte)
 ram_percentage = float(memory.percent)
 
 
+# Set RAM Threshold
+threshold = float(50)
+
 # Variable for winfolder method
 win_dir = str('D:\\Monitory_Reports\\')
 
