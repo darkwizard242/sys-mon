@@ -3,12 +3,31 @@
 import datetime
 import psutil
 
+
 # Defining data measurements
 bit = 0 or 1
 byte = float(8)
 kilobyte = float(1024)
 megabyte = float(1024 * 1024)
 gigabyte = float(1024 * 1024 * 1024)
+
+
+# Variables around RAM usage.
+memory = psutil.virtual_memory()
+# Total Memory variables.
+memory_kb_total = float(memory.total/kilobyte)
+memory_mb_total = float(memory.total/megabyte)
+memory_gb_total = float(memory.total/gigabyte)
+# Free Memory variables.
+memory_kb_free = float(memory.free/kilobyte)
+memory_mb_free = float(memory.free/megabyte)
+memory_gb_free = float(memory.free/gigabyte)
+# Used Memory variables.
+memory_kb_used = float(memory.used/kilobyte)
+memory_mb_used = float(memory.used/megabyte)
+memory_gb_used = float(memory.used/gigabyte)
+# Used Memory Percent Variable.
+ram_percentage = float(memory.percent)
 
 
 # Variable for winfolder method
