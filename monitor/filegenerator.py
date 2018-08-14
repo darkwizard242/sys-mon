@@ -35,37 +35,33 @@ def fetch_time():
     """
     # Assigning value of datetime module's datetime function to variable 'd'.
     d = datetime.datetime.now()
-    d_date = d.strftime('%B %d, %Y')
-    d_day = d.strftime('%A')
-    d_time = d.strftime('%I:%M:%S %p')
-    incident_record = str('Incident recorded at:')
-    print('Threshold limit recorded at: ')
-    print(d_date)
-    print(d_day)
-    print(d_time)
-    return d, d_date, d_day, d_time
 
 
 def win_folder():
+    report_file = (v.win_dir + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
     if os.path.exists(v.win_dir):
         print('Directory where reports are generated already exists. No new directory will be created.')
         print('Report Generation directory path is: ' + v.win_dir)
-        report_file = (v.win_dir + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
+        print('Generated Report file is: ' + str(report_file))
         thewriter = open(report_file, 'a')
         thewriter.write(v.incident_record)
         thewriter.write('\nDirectory is: ' + v.win_dir)
         thewriter.write('\nIncident Date: ' + v.d_date_report_input)
         thewriter.write('\nIncident Time of record: ' + v.d_time_report_input)
+        thewriter.write('\nRAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
+        thewriter.write('\nExceeded RAM record usage is: ' + str(v.ram_percentage) + '%')
     else:
         print('Directory where reports are generated does not exist and will now be created.')
         os.makedirs(v.win_dir, exist_ok=True)
         print('Report Generation directory has been created on: ' + v.win_dir)
-        report_file = (v.win_dir + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
+        print('Generated Report file is: ' + str(report_file))
         thewriter = open(report_file, 'a')
         thewriter.write(v.incident_record)
         thewriter.write('\nDirectory is: ' + v.win_dir)
         thewriter.write('\nIncident Date: ' + v.d_date_report_input)
         thewriter.write('\nIncident Time of record: ' + v.d_time_report_input)
+        thewriter.write('\nRAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
+        thewriter.write('\nExceeded RAM record usage is: ' + str(v.ram_percentage) + '%')
 
 
 def linux_folder():
