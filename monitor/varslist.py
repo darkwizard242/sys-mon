@@ -12,6 +12,10 @@ megabyte = float(1024 * 1024)
 gigabyte = float(1024 * 1024 * 1024)
 
 
+# Assigning variable for the type of data measurement to be used throughout the program.
+data_measure = gigabyte
+
+
 # Variables around RAM usage.
 memory = psutil.virtual_memory()
 # Total Memory variables.
