@@ -13,4 +13,4 @@ def ram_check():
         print("RAM usage is under threshold limit.")
 
 
-ram_check()
+# ram_check()
