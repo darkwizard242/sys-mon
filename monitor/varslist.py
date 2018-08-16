@@ -2,7 +2,7 @@
 
 import datetime
 import psutil
-
+import zipfile
 
 # Defining data measurements
 bit = 0 or 1
@@ -38,7 +38,10 @@ ram_percentage = float(memory.percent)
 threshold = float(50)
 
 # Variable for winfolder method
-win_dir = str('D:\\Monitory_Reports\\')
+win_dir = "D:\\Monitory_Reports\\"
+
+# Variable for file extension type.
+file_extension = '.txt'
 
 
 # Assigning value of datetime module's datetime function to variable 'd' and other strings for filename's
@@ -56,3 +59,15 @@ d_day_report_input = d.strftime('%A')
 d_time_report_input = d.strftime('%I:%M:%S %p')
 # Assigning a variable for printing incident record time.
 incident_record = str('Incident recorded at:')
+
+
+# Report file name for writing.
+win_report_file = (win_dir + 'report_' + d_date_report_filename + '-' + d_time_report_filename + file_extension)
+# Report file name for printing on console.
+win_report_file_explicit = ('report_' + d_date_report_filename + '-' + d_time_report_filename + file_extension)
+
+
+# Setting variable for zipping the generated file.
+archive_name = ('report_' + d_date_report_filename + '-' + d_time_report_filename)
+file_to_archive = win_report_file_explicit
+archive_proc = zipfile.ZipFile(archive_name + '.zip', "w")

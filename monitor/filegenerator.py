@@ -4,6 +4,7 @@ import datetime
 import os
 import monitor.varslist as v
 
+
 def fetch_time():
     """
     This function imports the current time details for both date and time.
@@ -38,12 +39,11 @@ def fetch_time():
 
 
 def win_folder():
-    report_file = (v.win_dir + 'report_' + v.d_date_report_filename + '-' + v.d_time_report_filename + '.txt')
     if os.path.exists(v.win_dir):
         print('Directory where reports are generated already exists. No new directory will be created.')
         print('Report Generation directory path is: ' + v.win_dir)
-        print('Generated Report file is: ' + str(report_file))
-        thewriter = open(report_file, 'a')
+        print('Generated Report file is: ' + str(v.win_report_file_explicit))
+        thewriter = open(v.win_report_file, 'a')
         thewriter.write(v.incident_record)
         thewriter.write('\nDirectory is: ' + v.win_dir)
         thewriter.write('\nIncident Date: ' + v.d_date_report_input)
@@ -68,8 +68,8 @@ def win_folder():
         print('Directory where reports are generated does not exist and will now be created.')
         os.makedirs(v.win_dir, exist_ok=True)
         print('Report Generation directory has been created on: ' + v.win_dir)
-        print('Generated Report file is: ' + str(report_file))
-        thewriter = open(report_file, 'a')
+        print('Generated Report file is: ' + str(v.win_report_file_explicit))
+        thewriter = open(v.win_report_file, 'a')
         thewriter.write(v.incident_record)
         thewriter.write('\nDirectory is: ' + v.win_dir)
         thewriter.write('\nIncident Date: ' + v.d_date_report_input)
@@ -90,6 +90,11 @@ def win_folder():
             thewriter.write('\nFree RAM recorded: ' + str(v.memory_gb_free) + ' GBs')
         else:
             print("Please correct the data_measurement variable value in varslist.")
+    os.chdir(v.win_dir)
+    print('Current directory is: ' + os.getcwd())
+    v.archive_proc.write(v.file_to_archive)
+    v.archive_proc.close()
+
 
 
 def linux_folder():
