@@ -15,7 +15,7 @@ def ram_check():
         print('RAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
         print('Current RAM usage is: ' + str(v.ram_percentage) + '%')
         fg.win_folder()
-        fg.archive_report()
+        fg.win_archive_report()
     else:
         print("RAM usage is under threshold limit.")
 

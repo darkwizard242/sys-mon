@@ -92,7 +92,7 @@ def win_folder():
             print("Please correct the data_measurement variable value in varslist.")
 
 
-def archive_report():
+def win_archive_report():
     os.chdir(v.win_dir)
     print('Current directory is: ' + os.getcwd())
     v.archive_proc.write(v.file_to_archive, compress_type=v.zipfile.ZIP_DEFLATED)
