@@ -70,4 +70,4 @@ win_report_file_explicit = ('report_' + d_date_report_filename + '-' + d_time_re
 # Setting variable for zipping the generated file.
 archive_name = ('report_' + d_date_report_filename + '-' + d_time_report_filename)
 file_to_archive = win_report_file_explicit
-archive_proc = zipfile.ZipFile(archive_name + '.zip', "w")
+archive_proc = zipfile.ZipFile(win_dir + archive_name + '.zip', "w")

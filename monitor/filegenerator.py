@@ -90,9 +90,12 @@ def win_folder():
             thewriter.write('\nFree RAM recorded: ' + str(v.memory_gb_free) + ' GBs')
         else:
             print("Please correct the data_measurement variable value in varslist.")
+
+
+def archive_report():
     os.chdir(v.win_dir)
     print('Current directory is: ' + os.getcwd())
-    v.archive_proc.write(v.file_to_archive)
+    v.archive_proc.write(v.file_to_archive, compress_type=v.zipfile.ZIP_DEFLATED)
     v.archive_proc.close()
 
 
