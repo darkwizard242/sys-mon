@@ -3,6 +3,11 @@
 import datetime
 import psutil
 import zipfile
+from platform import system
+
+
+# Identifying OS Type
+os_type = system()
 
 # Defining data measurements
 bit = 0 or 1
