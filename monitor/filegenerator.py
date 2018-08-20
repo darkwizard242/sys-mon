@@ -3,6 +3,7 @@
 import datetime
 import os
 import monitor.varslist as v
+import monitor.archiver as arch
 
 
 def fetch_time():
@@ -39,6 +40,41 @@ def fetch_time():
 
 
 def win_folder():
+    """
+    IF Statement verifies whether the directory specified against variable 'win_dir' exists or not.
+
+    IF exists, then generate a couple of print statements.
+
+        use of os functions for opening (or creating a file if it doesn't exist) based on the value of
+        v.win_report_file_explicit.
+
+        Prints the threshold limit set by the user.
+
+        Prints the current RAM limit i.e. the exceeded limit.
+
+        Nested IF/ELSE verifies what the data measurement type variable's value is & depending on that performs the
+        following:
+            1. Prints Total RAM.
+            2. Prints Current Used RAM.
+            3. Prints Current Free RAM.
+
+    Else, creates the directory and then generates a couple of print statements followed by the following actions:
+
+        use of os functions for opening (or creating a file if it doesn't exist) based on the value of
+        v.win_report_file_explicit.
+
+        Prints the threshold limit set by the user.
+
+        Prints the current RAM limit i.e. the exceeded limit.
+
+        Nested IF/ELSE verifies what the data measurement type variable's value is & depending on that performs the
+        following:
+            1. Prints Total RAM.
+            2. Prints Current Used RAM.
+            3. Prints Current Free RAM.
+
+    :return:
+    """
     if os.path.exists(v.win_dir):
         print('Directory where reports are generated already exists. No new directory will be created.')
         print('Report Generation directory path is: ' + v.win_dir)
@@ -92,20 +128,17 @@ def win_folder():
             print("Please correct the data_measurement variable value in varslist.")
 
 
-def win_archive_report():
-    os.chdir(v.win_dir)
-    print('Current directory is: ' + os.getcwd())
-    v.archive_proc.write(v.file_to_archive, compress_type=v.zipfile.ZIP_DEFLATED)
-    v.archive_proc.close()
+def call_archive():
+    arch.win_archive_report()   # Call to windows archiving function.
 
+
+# def win_archive_report():
+#     os.chdir(v.win_dir)
+#     print('Current directory is: ' + os.getcwd())
+#     v.archive_proc.write(v.file_to_archive, compress_type=v.zipfile.ZIP_DEFLATED)
+#     v.archive_proc.close()
 
 
 def linux_folder():
     directory = str('D:\\Monitory_Reports')
     os.makedirs(directory, exist_ok=True)
-
-
-#print(fetch_time.__doc__)
-#fetch_time()
-
-#help(fetch_time())
