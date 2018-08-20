@@ -2,14 +2,8 @@
 
 
 import monitor.ramchecker as rc
+import alerts.sendemail as se
 
-#from filegenerator import fetch_time, win_folder
 
 rc.ram_check()
-
-# fetch_time.d_date
-
-
-
-
-
+se
