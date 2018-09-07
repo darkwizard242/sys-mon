@@ -21,12 +21,16 @@ def ram_check():
     """
     if v.ram_percentage >= v.threshold:
         if v.os_type == 'Windows':
+            print('System is Windows.')
             print('RAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
             print('Current RAM usage is: ' + str(v.ram_percentage) + '%')
             fg.win_folder()
             fg.call_archive()
         elif v.os_type == 'Linux':
-            print('System is Linux')
+            print('System is Linux.')
+            print('RAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
+            print('Current RAM usage is: ' + str(v.ram_percentage) + '%')
+            fg.linux_folder()
         else:
             print("Not a supported OS Type")
     else:
