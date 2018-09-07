@@ -140,5 +140,57 @@ def call_archive():
 
 
 def linux_folder():
-    directory = str('D:\\Monitory_Reports')
-    os.makedirs(directory, exist_ok=True)
+    os.makedirs(v.nix_dir, exist_ok=True)
+    if os.path.exists(v.nix_dir):
+        print('Directory where reports are generated already exists. No new directory will be created.')
+        print('Report Generation directory path is: ' + v.nix_dir)
+        print('Generated Report file is: ' + str(v.nix_report_file_explicit))
+        os.chdir(v.nix_dir)
+        thewriter = open(v.nix_report_file, 'a')
+        thewriter.write(v.incident_record)
+        thewriter.write('\nDirectory is: ' + v.nix_dir)
+        thewriter.write('\nIncident Date: ' + v.d_date_report_input)
+        thewriter.write('\nIncident Time of record: ' + v.d_time_report_input)
+        thewriter.write('\nRAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
+        thewriter.write('\nExceeded RAM record usage is: ' + str(v.ram_percentage) + '%')
+        if v.data_measure == v.kilobyte:
+            thewriter.write('\nTotal RAM is: ' + str(v.memory_kb_total) + ' KBs')
+            thewriter.write('\nUsed RAM recorded: ' + str(v.memory_kb_used) + ' KBs')
+            thewriter.write('\nFree RAM recorded: ' + str(v.memory_kb_free) + ' KBs')
+        elif v.data_measure == v.megabyte:
+            thewriter.write('\nTotal RAM is: ' + str(v.memory_mb_total) + ' MBs')
+            thewriter.write('\nUsed RAM recorded: ' + str(v.memory_mb_used) + ' MBs')
+            thewriter.write('\nFree RAM recorded: ' + str(v.memory_mb_free) + ' MBs')
+        elif v.data_measure == v.gigabyte:
+            thewriter.write('\nTotal RAM is: ' + str(v.memory_gb_total) + ' GBs')
+            thewriter.write('\nUsed RAM recorded: ' + str(v.memory_gb_used) + ' GBs')
+            thewriter.write('\nFree RAM recorded: ' + str(v.memory_gb_free) + ' GBs')
+        else:
+            print("Please correct the data_measurement variable value in varslist.")
+    else:
+        print('Directory where reports are generated does not exist and will now be created.')
+        os.makedirs(v.nix_dir, exist_ok=True)
+        print('Report Generation directory has been created on: ' + v.nix_dir)
+        print('Generated Report file is: ' + str(v.nix_report_file_explicit))
+        os.chdir(v.nix_dir)
+        thewriter = open(v.nix_report_file, 'a')
+        thewriter.write(v.incident_record)
+        thewriter.write('\nDirectory is: ' + v.nix_dir)
+        thewriter.write('\nIncident Date: ' + v.d_date_report_input)
+        thewriter.write('\nIncident Time of record: ' + v.d_time_report_input)
+        thewriter.write('\nRAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
+        thewriter.write('\nExceeded RAM record usage is: ' + str(v.ram_percentage) + '%')
+        if v.data_measure == v.kilobyte:
+            thewriter.write('\nTotal RAM is: ' + str(v.memory_kb_total) + ' KBs')
+            thewriter.write('\nUsed RAM recorded: ' + str(v.memory_kb_used) + ' KBs')
+            thewriter.write('\nFree RAM recorded: ' + str(v.memory_kb_free) + ' KBs')
+        elif v.data_measure == v.megabyte:
+            thewriter.write('\nTotal RAM is: ' + str(v.memory_mb_total) + ' MBs')
+            thewriter.write('\nUsed RAM recorded: ' + str(v.memory_mb_used) + ' MBs')
+            thewriter.write('\nFree RAM recorded: ' + str(v.memory_mb_free) + ' MBs')
+        elif v.data_measure == v.gigabyte:
+            thewriter.write('\nTotal RAM is: ' + str(v.memory_gb_total) + ' GBs')
+            thewriter.write('\nUsed RAM recorded: ' + str(v.memory_gb_used) + ' GBs')
+            thewriter.write('\nFree RAM recorded: ' + str(v.memory_gb_free) + ' GBs')
+        else:
+            print("Please correct the data_measurement variable value in varslist.")
