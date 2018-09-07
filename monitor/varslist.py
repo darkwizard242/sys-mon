@@ -66,9 +66,9 @@ d_time_report_input = d.strftime('%I:%M:%S %p')
 incident_record = str('Incident recorded at:')
 
 
-# Report file name for writing.
+# Windows Report file name for writing.
 win_report_file = (win_dir + 'report_' + d_date_report_filename + '-' + d_time_report_filename + file_extension)
-# Report file name for printing on console.
+# Windows Report file name for printing on console.
 win_report_file_explicit = ('report_' + d_date_report_filename + '-' + d_time_report_filename + file_extension)
 
 
@@ -79,4 +79,12 @@ archive_proc = zipfile.ZipFile(win_dir + archive_name + '.zip', "w")
 
 
 # Variable for linux_folder method
-nix_dir = "~/MonitoringReports"
+nix_dir = "/tmp/MonitoringReports/"
+# Linux Report file name for writing.
+nix_report_file = ('report_' + d_date_report_filename + '-' + d_time_report_filename + file_extension)
+# Linux Report file name for printing on console.
+nix_report_file_explicit = ('report_' + d_date_report_filename + '-' + d_time_report_filename + file_extension)
+# Setting variable for zipping the generated file.
+archive_name = ('report_' + d_date_report_filename + '-' + d_time_report_filename)
+file_to_archive = nix_report_file_explicit
+archive_proc = zipfile.ZipFile(win_dir + archive_name + '.zip', "w")
