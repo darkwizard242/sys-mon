@@ -140,12 +140,10 @@ def call_archive():
 
 
 def linux_folder():
-    os.makedirs(v.nix_dir, exist_ok=True)
     if os.path.exists(v.nix_dir):
         print('Directory where reports are generated already exists. No new directory will be created.')
         print('Report Generation directory path is: ' + v.nix_dir)
         print('Generated Report file is: ' + str(v.nix_report_file_explicit))
-        os.chdir(v.nix_dir)
         thewriter = open(v.nix_report_file, 'a')
         thewriter.write(v.incident_record)
         thewriter.write('\nDirectory is: ' + v.nix_dir)
@@ -172,7 +170,6 @@ def linux_folder():
         os.makedirs(v.nix_dir, exist_ok=True)
         print('Report Generation directory has been created on: ' + v.nix_dir)
         print('Generated Report file is: ' + str(v.nix_report_file_explicit))
-        os.chdir(v.nix_dir)
         thewriter = open(v.nix_report_file, 'a')
         thewriter.write(v.incident_record)
         thewriter.write('\nDirectory is: ' + v.nix_dir)
