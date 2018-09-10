@@ -2,6 +2,7 @@
 
 import monitor.varslist as v
 import monitor.filegenerator as fg
+import monitor.archiver as arc
 
 
 def ram_check():
@@ -25,12 +26,13 @@ def ram_check():
             print('RAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
             print('Current RAM usage is: ' + str(v.ram_percentage) + '%')
             fg.win_folder()
-            fg.call_archive()
+            arc.win_archive_report()
         elif v.os_type == 'Linux':
             print('System is Linux.')
             print('RAM usage has exceeded the specified threshold, which is: ' + str(v.threshold) + '%')
             print('Current RAM usage is: ' + str(v.ram_percentage) + '%')
             fg.linux_folder()
+            arc.nix_archive_report()
         else:
             print("Not a supported OS Type")
     else:
