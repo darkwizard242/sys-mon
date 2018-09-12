@@ -13,4 +13,4 @@ python:
 # command to run tests
 script:
   - cd $TRAVIS_BUILD_DIR
-  - python sysmonitorying.py
+  - python sysmonitoring.py
