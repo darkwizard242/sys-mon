@@ -1,5 +1,8 @@
 [![Build Status](https://travis-ci.com/Tech-Overlord/sys-mon.svg?branch=master)](https://travis-ci.com/Tech-Overlord/sys-mon)
 
+![GitHub](https://img.shields.io/github/license/mashape/apistatus.svg)
+
+
 # sys-mon:
 
 Utility being developed in Python purely for the purposes of resource monitoring and alert system.
