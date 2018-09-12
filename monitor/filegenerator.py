@@ -35,9 +35,6 @@ def fetch_time():
 
     :return: str
     """
-    # Assigning value of datetime module's datetime function to variable 'd'.
-    d = datetime.datetime.now()
-
 
 def win_folder():
     """
@@ -126,17 +123,6 @@ def win_folder():
             thewriter.write('\nFree RAM recorded: ' + str(v.memory_gb_free) + ' GBs')
         else:
             print("Please correct the data_measurement variable value in varslist.")
-
-
-def call_archive():
-    arch.win_archive_report()   # Call to windows archiving function.
-
-
-# def win_archive_report():
-#     os.chdir(v.win_dir)
-#     print('Current directory is: ' + os.getcwd())
-#     v.archive_proc.write(v.file_to_archive, compress_type=v.zipfile.ZIP_DEFLATED)
-#     v.archive_proc.close()
 
 
 def linux_folder():
