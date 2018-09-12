@@ -2,8 +2,8 @@
 
 
 import monitor.ramchecker as rc
-# import alerts.sendemail as se
+import alerts.sendemail as se
 
 
 rc.ram_check()
-# se
+se
