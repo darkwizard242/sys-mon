@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/Tech-Overlord/sys-mon.svg?branch=master)](https://travis-ci.com/Tech-Overlord/sys-mon)   [![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENSE.md)
+[![Build Status](https://travis-ci.com/Tech-Overlord/sys-mon.svg?branch=master)](https://travis-ci.com/Tech-Overlord/sys-mon)   [![license](https://img.shields.io/badge/license-BSD%202--Clause-blue.svg)](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENSE.md)
 # sys-mon:
 
 Utility being developed in Python purely for the purposes of resource monitoring and alert system.
