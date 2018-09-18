@@ -74,5 +74,5 @@ Since the utility automatically identifies which system it is running on at each
 As mentioned above, these are variables that are only related to Windows Operating systems.
 
 |          Variable           |                  Description                |              Example              |
-|        -------------        |                  :-------------:            |               -----:              |
+|        :-------------        |                  :-------------            |               :-----             |
 |**win_dir**| Variable for the directory on a windows system, where you want the report file to be generated. If the folder does not exist. It will automatically be created. |Assuming you need the report file to be generated on the root of a folder called **Monitoring_Reports** on the system's D: drive, change value from `win_dir = "D:\\example\\"` to `win_dir = "D:\\Monitory_Reports\\"`. Please **NOTE** that the double backslashes are compulsory for Windows oriented paths in Python. |
