@@ -75,4 +75,18 @@ As mentioned above, these are variables that are only related to Windows Operati
 
 |          Variable           |                  Description                |              Example              |
 |        :-------------        |                  :-------------            |               :-----             |
-|**win_dir**| Variable for the directory on a windows system, where you want the report file to be generated. If the folder does not exist. It will automatically be created. |Assuming you need the report file to be generated on the root of a folder called **Monitoring_Reports** on the system's D: drive, change value from `win_dir = "D:\\example\\"` to `win_dir = "D:\\Monitory_Reports\\"`. Please **NOTE** that the double backslashes are compulsory for Windows oriented paths in Python. |
+|**win_dir**| Variable for the directory on a Windows system, where you want the report file to be generated. If the folder does not exist, it will automatically be created at the time of script's first execution. |Assuming you need the report file to be generated on the root of a folder called **Monitoring_Reports** on the system's D: drive, change value from `win_dir = "D:\\example\\"` to `win_dir = "D:\\Monitory_Reports\\"`. Please **NOTE** that the double backslashes are compulsory for Windows oriented paths in Python. |
+
+#### 2.1.2. Linux OS variables list & description
+As mentioned above, these are variables that are only related to Linux Operating systems.
+
+|          Variable           |                  Description                |              Example              |
+|        :-------------        |                  :-------------            |               :-----             |
+|**nix_dir**| Variable for the directory on a Linux system, where you want the report file to be generated. If the folder does not exist already, it will automatically be created at the time of script's first execution. |Assuming you need the report file to be generated on the root of a folder called **Monitoring_Reports** on the system's /tmp folder, change value from `win_dir = "/tmp/"` to `win_dir = "/tmp/Monitory_Reports/"`. Please **NOTE** that the double backslashes are **NOT** required for Linux oriented paths in Python, they can be added as they are. |
+
+#### 2.1.3. General variables list & description
+As mentioned above, these are variables that are used for general purposes. Description has been provided in case that they may need to be changed (if the user desires to).
+
+|          Variable           |                  Description                |              Example              |
+|        :-------------        |                  :-------------            |               :-----             |
+|**data_measure**| It is the variable which holds the value for the data measurement type. By default, code has it set to GigaByte. Due to common uses, only GigaBytes, MegaBytes and KiloBytes are supported in this utility for now. | If for example, you need to change the data measurement from gigabyte to megabyte for representation of data measurement type, change the variable's value from `data_measure = gigabyte` to `data_measure = megabyte`. This will return the output in MegaBytes format. |
