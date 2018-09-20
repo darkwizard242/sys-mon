@@ -20,7 +20,7 @@ then
 		echo "Printing the existing Python3's version." && echo
 		python3 -V
 		echo "Installing Python3's PIP and other tools." && echo
-		sudo apt-get install -y python3-pip build-essential libssl-dev libffi-dev python-dev
+		sudo apt-get install -y python3-pip build-essential libssl-dev libffi-dev python-dev python3-setuptools
 		echo "Installing psutil library using pip" && echo
 		sudo pip3 install psutil	# Installing psutil
 		sleep 30
