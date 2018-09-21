@@ -1,4 +1,4 @@
-Set-ExecutionPolicy Bypass -Force -Scope CurrentUser
+## Set-ExecutionPolicy Bypass -Force -Scope CurrentUser
 
 ## Downloading Chocolatey, installing and upgrading it
 $script = New-Object Net.WebClient
