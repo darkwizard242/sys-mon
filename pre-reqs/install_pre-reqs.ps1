@@ -1,4 +1,4 @@
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Unrestricted
+Set-ExecutionPolicy Bypass -Scope Process
 
 ## Downloading Chocolatey, installing and upgrading it
 $script = New-Object Net.WebClient
