@@ -1,8 +1,10 @@
+$InstallDir= "$choco_dir"
+$env:ChocolateyInstall="$InstallDir"
+Set-ExecutionPolicy Bypass
+iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ## Set-ExecutionPolicy Bypass -Force -Scope CurrentUser
 
 ## Downloading Chocolatey, installing and upgrading it
-$script = New-Object Net.WebClient
-$script.DownloadString("https://chocolatey.org/install.ps1")
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 choco upgrade chocolatey
 
