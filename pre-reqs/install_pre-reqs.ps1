@@ -1,6 +1,6 @@
 $InstallDir= "$choco_dir"
 $env:ChocolateyInstall="$InstallDir"
-Set-ExecutionPolicy Bypass
+Set-ExecutionPolicy Bypass -Scope CurrentUser
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ## Set-ExecutionPolicy Bypass -Force -Scope CurrentUser
 
