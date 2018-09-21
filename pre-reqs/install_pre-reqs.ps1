@@ -5,8 +5,9 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.We
 choco upgrade chocolatey
 
 ## Download and Install Python3
-$env:PythonInstall="$env:ProgramData\Python370"
-choco install -y python3 --install-directory "$env:PythonInstall"
+$env:PythonInstall="$env:ProgramData\Python37"
+choco install -y python3 --params '"/InstallDir:"$env:PythonInstall"'
+#choco install -y python3 --install-directory "$env:PythonInstall"
 refreshenv
 python -V
 
