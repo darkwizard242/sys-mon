@@ -1,8 +1,13 @@
-$InstallDir="$choco_dir"
-$env:ChocolateyInstall="$InstallDir"
+$env:ChocolateyInstall="$env:ProgramData\chocoportable"
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+
+
+#$InstallDir="$choco_dir"
+#$env:ChocolateyInstall="$InstallDir"
 #Set-ExecutionPolicy Bypass -Scope CurrentUser
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-## Set-ExecutionPolicy Bypass -Force -Scope CurrentUser
+#iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+#Set-ExecutionPolicy Bypass -Force -Scope CurrentUser
 
 ## Downloading Chocolatey, installing and upgrading it
 #iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
