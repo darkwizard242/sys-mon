@@ -22,6 +22,12 @@ IT Professionals. Regardless of being a system administrator, developer or teste
  5. Email alert to the owner with report archive as an attachment.
     * Use of python `smtplib` library to connect with Gmail's SMTP server and send an outgoing email to the owner which will also includes stats of overall RAM usage upon utilization exceeding the threshold.
 
+### sys-mon's flowchart model:
+*An easy to understand flowchart model of what sys-mon does!*
+
+![sys-mon-model](img/sys-mon-model.png)
+
+
 ## 1. Getting Started
 
 This sections covers the steps needed to get the utility in a running state on a system.
