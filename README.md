@@ -1,4 +1,12 @@
-[![Build Status](https://travis-ci.com/Tech-Overlord/sys-mon.svg?branch=master)](https://travis-ci.com/Tech-Overlord/sys-mon)   [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=Tech-Overlord_sys-mon&metric=alert_status)](https://sonarcloud.io/dashboard?id=Tech-Overlord_sys-mon)   [![license](https://img.shields.io/badge/license-BSD%202--Clause-blue.svg)](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENSE.md)
+**Azure DevOps:** [![Build Status](https://dev.azure.com/Tech-Overlord/sys-mon/_apis/build/status/sys-mon_build)](https://dev.azure.com/Tech-Overlord/sys-mon/_build/latest?definitionId=2)
+
+**Travis-CI:** [![Build Status](https://travis-ci.com/Tech-Overlord/sys-mon.svg?branch=master)](https://travis-ci.com/Tech-Overlord/sys-mon)   
+
+**SonarCloud:** [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=Tech-Overlord_sys-mon&metric=alert_status)](https://sonarcloud.io/dashboard?id=Tech-Overlord_sys-mon)  
+
+**License:** [![license](https://img.shields.io/badge/license-BSD%202--Clause-blue.svg)](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENSE.md)  
+
+**CII Best Practicies:** [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/2241/badge)](https://bestpractices.coreinfrastructure.org/projects/2241)
 
 
 # sys-mon:
