@@ -4,9 +4,9 @@
 
 **SonarCloud:** [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=Tech-Overlord_sys-mon&metric=alert_status)](https://sonarcloud.io/dashboard?id=Tech-Overlord_sys-mon)  
 
-**License:** [![license](https://img.shields.io/badge/license-BSD%202--Clause-blue.svg)](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENSE.md)  
-
 **CII Best Practicies:** [![CII Best Practices](https://bestpractices.coreinfrastructure.org/projects/2241/badge)](https://bestpractices.coreinfrastructure.org/projects/2241)
+
+**License:** [![license](https://img.shields.io/badge/license-BSD%202--Clause-blue.svg)](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENSE.md)  
 
 
 # sys-mon:
