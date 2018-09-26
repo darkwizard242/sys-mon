@@ -178,6 +178,7 @@ Windows and Linux both have their own scheduling mechanisms so I would recommend
 Easiest way to schedule would be using task scheduler. You can google how to set up a task on task scheduler or use this [link](https://www.digitalcitizen.life/how-create-task-basic-task-wizard) for reference. You will need to set the action item as the batch script that is provided and should be on the root of sys-mon called [batch_exeuction](https://github.com/Tech-Overlord/sys-mon/blob/master/batch_execution.bat). Simply modify the batch file for the absolute paths that are mentioned within the batch script. 
 
 Example of what the action item may look like:
+
 ![sys-mon-model](img/task_action.png)
 
 ### 3.2 Linux
