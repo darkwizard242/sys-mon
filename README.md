@@ -135,3 +135,51 @@ Below table consists a list of variables that need to be provided with appropria
 |**sender_email**| Variable that will contain the email address of the sender. | Assuming that your email address is **myemail@gmail.com**, change from `sender_email = str('sender0@gmail.com')` to `sender_email = str('myemail@gmail.com')`. **DO NOT REMOVE** the single quotes within the string value('  '). |
 |**sender_password**| Variable that contains the password to the sender's email address above. | Assuming that the password to your email address is **iampassword**, change from `sender_password = str('password')` to `sender_password = str('iampassword')`. **DO NOT REMOVE** the single quotes within the string value('  '). |
 |**receiver_email**| Variable that will contain the email address of the receiver. | Assuming that your email address is **myemail@gmail.com**, change from `sender_email = str('sender0@gmail.com')` to `sender_email = str('myemail@gmail.com')`. **DO NOT REMOVE** the single quotes within the string value('  '). |
+
+### 2.3. Execution.
+
+Section below describes the execution process for both Windows & Linux systems.
+
+#### 2.3.1 Windows
+1. Perform cd into the directory where the extracted archive or project is cloned in. For instance, if you have extracted or cloned into D:\ drive. Do `cd D:\sys-mon`. Current directory should be: D:\sys-mon\
+2. Execute sysmonitoring.py with the following commands: `python main_system.py`
+3. All done. That should print an output like below:
+```cmd
+D:\sys-mon>python sysmonitoring.py
+System is Windows.
+RAM usage has exceeded the specified threshold, which is: 50.0%
+Current RAM usage is: 76.9%
+Directory where reports are generated already exists. No new directory will be created.
+Report Generation directory path is: D:\Monitory_Reports\
+Generated Report file is: report_26092018-102010.txt
+Current directory is: D:\Monitory_Reports
+```
+
+#### 2.3.1 Linux
+1. If the code was cloned, then simply cd into the directory with `cd ~\sys-mon`. If it was downloaded using wget and tar has been extracted already as mentioned in steps from section **1.3.2**, then change to it's directory, e.g. `cd ~/sys-mon-1.0.0/`
+2. Assuming the scripts have been provided with executable permissions using `chmod +x *`, we ca now perform a straight execution using `python3 sysmonitoring.py`. Output will be something like the following:
+```bash
+tech-overlord@ubuntu:~/sys-mon$ python3 sysmonitoring.py
+System is Linux.
+RAM usage has exceeded the specified threshold, which is: 50.0%
+Current RAM usage is: 69.2%
+Directory where reports are generated does not exist and will now be created.
+Report Generation directory has been created on: /tmp/MonitoringReports/
+Generated Report file is: report_25092018-222809.txt
+Current directory is: /tmp/MonitoringReports
+```
+
+## 3. Scheduling:
+It's best to schedule the utility to run. It is your choice to set up the schedule according to your needs, whether it be at system boot or at a specific time or perhaps even after particular intervals. Simply your choice, so decide what meets your business needs the best.
+
+Windows and Linux both have their own scheduling mechanisms so I would recommend using the most basic ways of scheduling tasks to run on either systems.
+
+### 3.1 Windows
+Easiest way to schedule would be using task scheduler. You can google how to set up a task on task scheduler or use this [link](https://www.digitalcitizen.life/how-create-task-basic-task-wizard) for reference. You will need to set the action item as the batch script that is provided and should be on the root of sys-mon called [batch_exeuction](https://github.com/Tech-Overlord/sys-mon/blob/master/batch_execution.bat). Simply modify the batch file for the absolute paths that are mentioned within the batch script. 
+
+Example of what the action item may look like:
+![sys-mon-model](img/task_action.png)
+
+### 3.2 Linux
+Set a cron-job on Linux to have `sysmonitoring.py` execute automatically at whatever schedule you desire. For reference, have a look at this [link](http://www.unixgeeks.org/security/newbie/unix/cron-1.html) if you need to find out how to set up cronjobs.
+
