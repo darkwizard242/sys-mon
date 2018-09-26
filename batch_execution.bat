@@ -11,4 +11,3 @@ SET monitoring_file="D:\Git_Repos\sys-mon\sysmonitoring.py"
 
 REM execution of the sysmonitoring.py file.
 %python_dir% %monitoring_file%
-PAUSE
