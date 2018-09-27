@@ -60,8 +60,6 @@ This sections covers the steps needed to get the utility in a running state on a
    * **Windows**: You can easily install psutil library using command prompt i.e. cmd. Just open cmd, and type in `pip install psutil` .
     
    * **Ubuntu LTS OS's**: Just run the [install_pre-reqs.bash](https://github.com/Tech-Overlord/sys-mon/blob/master/pre-reqs/install_pre-reqs.bash) script and it will take care of that for you.
-    
-   * **Note:** [psutil](https://github.com/giampaolo/psutil) library was developed by [Giampaolo Rodola](https://github.com/giampaolo). It is a cross platform library for system level information. Kudos to Giampaolo !!!
 
 
 ### 1.3. Clone/Download `sysmon` release.
@@ -184,3 +182,23 @@ Example of what the action item may look like:
 ### 3.2 Linux
 Set a cron-job on Linux to have `sysmonitoring.py` execute automatically at whatever schedule you desire. For reference, have a look at this [link](http://www.unixgeeks.org/security/newbie/unix/cron-1.html) if you need to find out how to set up cronjobs.
 
+
+## 4. Build/Deployments:
+This project has been built by integrating and using both [TravisCI](https://travis-ci.com/Tech-Overlord/sys-mon) & [Azure DevOps](https://dev.azure.com/Tech-Overlord/sys-mon/sys-mon%20Team/_dashboards/sys-mon%20Team/aec4f0d8-16f8-4880-ac8e-1dd8e3ab5314) onto Linux (Ubuntu 1604 LTS) & Windows Instances generated on AWS & Azure.
+
+Code analysis has been done using integration with [SonarCloud](https://sonarcloud.io/dashboard?id=Tech-Overlord_sys-mon).
+
+Below is a DevOps diagram of this project as it stands now:
+
+![sys-mon-model](img/devops-diagram.png)
+
+## 5. Authors
+[Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/)
+
+
+## 6. License
+Please see [License](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENSE.md) for use or feel free to ask.
+
+
+## 7. Acknowledgments
+[Giampaolo Rodola](https://github.com/giampaolo) for his brilliant development of [psutil](https://github.com/giampaolo/psutil) package.
