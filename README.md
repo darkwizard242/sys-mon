@@ -109,7 +109,7 @@ As mentioned above, these are variables that are used for general purposes. Desc
 ### 2.2. Changes to emailsvarslist.py
 This file is located on the root of **alerts** package (hierarchy is: sys-mon/alerts/emailvarslist.py). It basically contains all the variables and their corresponding values that are used/inherited throughout the **email** modules which reside within the **email** package. Variables and values were stored into this particular file for the purpose of "ease of use", which means that the user can simply change the corresponding variable's value without having to go through the whole code.
 
-**PLEASE NOTE** that the current email support is with gmail (Google Mail) only. Connection is secure over SSL. You will need to set Allow less secure apps: OFF to Allowed on https://myaccount.google.com/lesssecureapps?pli=1 for sys-mon utility to connect with gmail and send emails. If you do not need the email functionality enabled. Simply comment the following two lines of code from `sysmonitoring.py` (resides on the root of **sys-mon**).
+**PLEASE NOTE** that the current email support is with gmail (Google Mail) only. Connection is secure over SSL (**Secure Socket Layer**). You will need to set Allow less secure apps: OFF to Allowed on https://myaccount.google.com/lesssecureapps?pli=1 for sys-mon utility to connect with gmail and send emails. If you do not need the email functionality enabled. Simply comment the following two lines of code from `sysmonitoring.py` (resides on the root of **sys-mon**).
 
 Disabling email functionality (sysmonitoring.py)
 
@@ -124,7 +124,7 @@ TO:
 # import alerts.sendemail as se
 # se
 ```
-By default, the package is has those two lines of code set as a comment so that you can easily run & test sys-mon without email functionality at first.
+By default, the package has those two lines of code set as a comment so that you can easily run & test sys-mon without email functionality since the execution will fail if the google mail's authentication for sender's email and password are incorrect.
 
 Below table consists a list of variables that need to be provided with appropriate values for the email functionality to work.
 
