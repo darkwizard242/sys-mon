@@ -702,6 +702,15 @@ D:\sys-mon>python -m cProfile -s cumulative sysmonitoring.py
 
 ```
 
+#### 5.3. Code Analysis
+
+**sys-mon's** code analysis is publicly available on SonarCloud. Feel free to check the quality if you like by clicking the **SonarCloud** badge on the top of this page.
+
+![sys-mon-model](img/sys-mon-code-analysis.png)
+
+## 6. Contributions.
+Please have a look at [CONTRIBUTING](https://github.com/Tech-Overlord/sys-mon/blob/master/CONTRIBUTING.md) guidelines if you would like to contribute to further development of `sys-mon`.
+
 ## 6. Authors
 * [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/)
 
