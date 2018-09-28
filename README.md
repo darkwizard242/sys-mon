@@ -193,7 +193,7 @@ Below is a DevOps diagram of this project as it stands now:
 ![sys-mon-model](img/devops-diagram.png)
 
 ## 5. Authors
-[Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/)
+* [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/)
 
 
 ## 6. License
@@ -201,4 +201,4 @@ Please see [License](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENS
 
 
 ## 7. Acknowledgments
-[Giampaolo Rodola](https://github.com/giampaolo) for his brilliant development of [psutil](https://github.com/giampaolo/psutil) package.
+* [Giampaolo Rodola](https://github.com/giampaolo) for his brilliant development of [psutil](https://github.com/giampaolo/psutil) package.
