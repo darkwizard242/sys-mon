@@ -194,7 +194,7 @@ Below is a DevOps diagram of this project as it stands now:
 
 ## 5. Statistics
 
-#### Execution time statistics:
+#### 5.1 Execution time statistics:
 
 To analyze the time duration of sys-mon's execution, 4 loops took place with 5 repetitions in each loop. Best execution time recorded was 80 nano-seconds.
 ```cmd
@@ -203,7 +203,7 @@ D:\sys-mon>python -m timeit -n 4 -r 5 -s "import sysmonitoring"
 ```
 Thus ensuring that the utility's performance in terms of speed is high.
 
-#### Functional statistics:
+#### 5.2 Functional statistics:
 Following is the amount of time spent on each function and method, as well as, the number of times each of them has been called.
 ```cmd
 D:\sys-mon>python -m cProfile -s cumulative sysmonitoring.py
