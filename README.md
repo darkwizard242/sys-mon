@@ -711,13 +711,13 @@ D:\sys-mon>python -m cProfile -s cumulative sysmonitoring.py
 ## 6. Contributions.
 Please have a look at [CONTRIBUTING](https://github.com/Tech-Overlord/sys-mon/blob/master/CONTRIBUTING.md) guidelines if you would like to contribute to further development of `sys-mon`.
 
-## 6. Authors
+## 7. Authors
 * [Ali Muhammad](https://www.linkedin.com/in/ali-muhammad-759791130/)
 
 
-## 7. License
+## 8. License
 Please see [License](https://github.com/Tech-Overlord/sys-mon/blob/master/LICENSE.md) for use or feel free to ask.
 
 
-## 8. Acknowledgments
+## 9. Acknowledgments
 * [Giampaolo Rodola](https://github.com/giampaolo) for his brilliant development of [psutil](https://github.com/giampaolo/psutil) package.
