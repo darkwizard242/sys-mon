@@ -100,7 +100,7 @@ As mentioned above, these are variables that are only related to Linux Operating
 
 |          Variable           |                  Description                |              Example              |
 |        :-------------        |                  :-------------            |               :-----             |
-|**nix_dir**| Variable for the directory on a Linux system, where you want the report file to be generated. If the folder does not exist already, it will automatically be created at the time of script's first execution. |Assuming you need the report file to be generated on the root of a folder called **Monitoring_Reports** on the system's /tmp folder, change value from `win_dir = "/tmp/"` to `win_dir = "/tmp/Monitory_Reports/"`. Please **NOTE** that the double backslashes are **NOT** required for Linux oriented paths in Python, they can be added as they are. |
+|**nix_dir**| Variable for the directory on a Linux system, where you want the report file to be generated. If the folder does not exist already, it will automatically be created at the time of script's first execution. |Assuming you need the report file to be generated on the root of a folder called **Monitoring_Reports** on the system's /tmp folder, change value from `nix_dir = "/tmp/"` to `nix_dir = "/tmp/Monitory_Reports/"`. Please **NOTE** that the double backslashes are **NOT** required for Linux oriented paths in Python, they can be added as they are. |
 
 #### 2.1.3. General variables list & description
 As mentioned above, these are variables that are used for general purposes. Description has been provided in case that they may need to be changed (if the user desires to).
