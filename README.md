@@ -73,7 +73,7 @@ This sections covers the steps needed to get the utility in a running state on a
    
 #### 1.3.2. Ubuntu:
    * Change to user's home directory, for e.g. by entering the following command: `cd ~`
-   * Either Download using `wget https://github.com/Tech-Overlord/sys-mon/releases/download/v1.0.0/system-info-1.0.0.tar.gz` or clone using `git clone https://github.com/Tech-Overlord/sys-mon`
+   * Either Download using `wget https://github.com/Tech-Overlord/sys-mon/releases/download/v1.0.0/sys-mon-1.0.0.tar.gz` or clone using `git clone https://github.com/Tech-Overlord/sys-mon`
        * If cloned, simply change into the root directory of the cloned project, for e.g. `cd ~/sys-mon/`
             * Do `chmod +x *`
        * If tar was downloaded using `wget`. Extract it using the commands: `tar -zxf sys-mon-1.0.0.tar.gz` and then cd into extracted directory, for e.g. if the extracted directory is sys-mon-1.0.0, then do `cd sys-mon-1.0.0/`
