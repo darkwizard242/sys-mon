@@ -69,7 +69,7 @@ This sections covers the steps needed to get the utility in a running state on a
 ### 1.3. Clone/Download `sysmon` release.
 
 #### 1.3.1. Windows:
-   * Either [Download](https://github.com/Tech-Overlord/sys-mon/releases/download/v1.0.0/system-info-1.0.1.zip) the latest release or clone the source code using `git clone https://github.com/Tech-Overlord/sys-mon`
+   * Either [Download](https://github.com/Tech-Overlord/sys-mon/releases/download/v1.0.0/sys-mon-1.0.0.zip) the latest release or clone the source code using `git clone https://github.com/Tech-Overlord/sys-mon`
    
 #### 1.3.2. Ubuntu:
    * Change to user's home directory, for e.g. by entering the following command: `cd ~`
