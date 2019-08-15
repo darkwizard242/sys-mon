@@ -2,7 +2,7 @@
 
 
 
-**Azure DevOps:** [![Build Status](https://dev.azure.com/Tech-Overlord/sys-mon/_apis/build/status/sys-mon_build)](https://dev.azure.com/Tech-Overlord/sys-mon/_build/latest?definitionId=2)
+**Azure DevOps:** [![Build Status](https://dev.azure.com/darkwizard242/sys-mon/_apis/build/status/sys-mon_build)](https://dev.azure.com/darkwizard242/sys-mon/_build/latest?definitionId=2)
 
 **Travis-CI:** [![Build Status](https://travis-ci.com/Tech-Overlord/sys-mon.svg?branch=master)](https://travis-ci.com/Tech-Overlord/sys-mon)   
 
