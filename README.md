@@ -4,7 +4,7 @@
 
 **Azure DevOps:** [![Build Status](https://dev.azure.com/darkwizard242/sys-mon/_apis/build/status/sys-mon_build)](https://dev.azure.com/darkwizard242/sys-mon/_build/latest?definitionId=2)
 
-**Travis-CI:** [![Build Status](https://travis-ci.com/Tech-Overlord/sys-mon.svg?branch=master)](https://travis-ci.com/Tech-Overlord/sys-mon)   
+**Travis-CI:** [![Build Status](https://travis-ci.com/darkwizard242/sys-mon.svg?branch=master)](https://travis-ci.com/darkwizard242/sys-mon)  
 
 **SonarCloud:** [![Quality Gate](https://sonarcloud.io/api/project_badges/measure?project=Tech-Overlord_sys-mon&metric=alert_status)](https://sonarcloud.io/dashboard?id=Tech-Overlord_sys-mon)  
 
